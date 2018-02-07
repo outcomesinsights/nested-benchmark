@@ -30,7 +30,7 @@ module Benchmark
 
       if opts[:include_remainder] && !children.empty?
         remainder_tms = (self - children.inject(:+))
-        remainder_tms = "Remainder"
+        remainder_tms.label = "Remainder"
         lines << remainder_tms.to_s(indent: indent)
       end
 
